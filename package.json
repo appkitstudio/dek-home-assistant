@@ -1,0 +1,38 @@
+{
+  "name": "@appkit/dek-home-assistant",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Plugin providing cards and widgets for Home Assistant",
+  "author": "Appkit",
+  "type": "module",
+  "scripts": {
+    "dev": "appkit dek plugin dev",
+    "build": "appkit dek plugin build",
+    "publish": "appkit dek plugin publish",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@appkit/dek-plugin": "*",
+    "@appkit/dek-ui": "*",
+    "home-assistant-js-websocket": "^9.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.13",
+    "valtio": "^2.1.2"
+  },
+  "devDependencies": {
+    "@appkit/cli": "*",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.0.2",
+    "vite-plugin-svgr": "^4.3.0"
+  },
+  "plugin": {
+    "main": "src/plugin.tsx"
+  }
+}
