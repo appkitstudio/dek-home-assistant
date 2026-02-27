@@ -2,7 +2,9 @@ import {
   DekApi,
   DekPlugin,
   DekPluginComponentItem,
+  DekPluginConfig,
   DekPluginScreenItem,
+  DekRegistry,
 } from "@appkit/dek-plugin";
 import EntitiesScreen from "./screens/EntitiesScreen/EntitiesScreen";
 import { connect, disconnect, onEntitiesUpdated } from "./api/ha";
@@ -18,11 +20,24 @@ export type PluginApi = {
 };
 
 class Plugin implements DekPlugin {
-  readonly config: Record<string, string> = {};
+  readonly config: DekPluginConfig = {};
   dekApi: DekApi | null = null;
 
-  constructor(config: Record<string, string>) {
+  constructor(config: DekPluginConfig, registry: DekRegistry) {
     this.config = config;
+
+    // register our weather header plugin
+    registry.registerCollectionItem(
+      "header-widgets",
+      "dek-homeassistant-weather",
+      {
+        name: "Date and Time",
+        component: (props: any) => (
+          <WeatherView dekApi={this.dekApi} {...props} />
+        ),
+        props: {},
+      }
+    );
   }
 
   public async load(api: DekApi) {
