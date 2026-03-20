@@ -1,6 +1,6 @@
 {
   "name": "@appkit/dek-home-assistant",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "description": "Plugin providing cards and widgets for Home Assistant",
   "author": "Appkit",
@@ -21,7 +21,7 @@
     "valtio": "^2.1.2"
   },
   "devDependencies": {
-    "@appkit/cli": "*",
+    "@appkit/cli": "^2.13.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -33,6 +33,20 @@
     "vite-plugin-svgr": "^4.3.0"
   },
   "plugin": {
-    "main": "src/plugin.tsx"
+    "title": "Home Assistant",
+    "main": "src/plugin.tsx",
+    "schema": {
+      "haUri": {
+        "type": "string",
+        "title": "Home Assistant URI",
+        "default": "ws://homeassistant.local:8123",
+        "required": true
+      },
+      "haAccessToken": {
+        "type": "string",
+        "title": "Long-lived access token",
+        "required": true
+      }
+    }
   }
 }

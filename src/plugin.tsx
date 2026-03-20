@@ -186,6 +186,7 @@ class Plugin implements DekPlugin {
     return [
       {
         path: "/entities",
+        description: "Browse and control all Home Assistant entities",
         element: (props: any) => <EntitiesScreen {...props} />,
       },
     ];

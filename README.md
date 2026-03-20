@@ -1,51 +1,35 @@
 # dek-home-assistant
 
-Home Assistant integration plugin for DEK. Connects to Home Assistant via the WebSocket API, maintains live entity state, and provides components for controlling and displaying smart home devices.
+Brings your Home Assistant smart home into DEK. Connects via the Home Assistant WebSocket API and keeps entity state live — so your cards and widgets always reflect the current state of your devices.
 
-## Setup
+## Configuration
 
-### 1. Get a Long-Lived Access Token
+You'll need a long-lived access token from Home Assistant:
+**Profile → Long-Lived Access Tokens → Create Token**
 
-In Home Assistant: Profile → Long-Lived Access Tokens → Create Token
-
-### 2. Create an Integration
-
-Configure with:
-
-| Key | Description | Example |
+| Setting | Description | Example |
 |---|---|---|
-| `haUri` | Home Assistant WebSocket URL | `ws://homeassistant.local:8123/api/websocket` |
-| `haAccessToken` | Long-lived access token | `eyJ0eX...` |
-
-### 3. Development
-
-```bash
-npm install
-npm run dev
-```
+| Home Assistant URI | WebSocket URL for your Home Assistant instance | `ws://homeassistant.local:8123/api/websocket` |
+| Access Token | Long-lived access token | `eyJ0eX...` |
 
 ## Components
 
-| Key | Description |
-|---|---|
-| `toggle-card` | Card to toggle a switch/light on and off |
-| `weather-view` | Current weather from a Home Assistant weather entity |
-| `sensor-card` | Displays sensor readings (temperature, humidity, etc.) |
-| `media-card` | Play/pause media player control |
-| `media-view` | Rich media player view with artwork and track info |
+### `toggle-card`
+A card that shows the current state of a switch or light and lets you toggle it on and off. Configure the entity ID, display name, and icon.
 
-See [docs/components.md](docs/components.md) for schema details.
+### `weather-view`
+Displays current weather conditions from a Home Assistant weather entity. Also appears automatically in the board header as a compact weather widget.
+
+### `sensor-card`
+Shows a live reading from any sensor entity — temperature, humidity, energy usage, and more. Supports normal and clear card styles.
+
+### `media-card`
+A compact play/pause control for a media player entity. Shows the current playback state and lets you control it directly from your board.
+
+### `media-view`
+A rich media player widget with artwork, track info, and playback controls. Great for a dedicated music or media zone.
 
 ## Screens
 
-| Path | Description |
-|---|---|
-| `/entities` | Browse all Home Assistant entities |
-
-## Header Widget
-
-This plugin registers a `dek-homeassistant-weather` header widget in the `header-widgets` collection, showing current weather in the board header.
-
-## API
-
-See [docs/api.md](docs/api.md) for the `useEntities` and `useEntity` hooks.
+### `/entities`
+Browse and inspect all entities in your Home Assistant instance.
