@@ -1,7 +1,7 @@
 {
   "name": "@appkit/dek-home-assistant",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin providing cards and widgets for Home Assistant",
   "author": {
     "name": "Appkit"
@@ -23,7 +23,7 @@
     "valtio": "^2.1.2"
   },
   "devDependencies": {
-    "@appkit/cli": "^2.13.1",
+    "@appkit/cli": "^2.13.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
