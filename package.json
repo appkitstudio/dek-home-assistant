@@ -23,7 +23,7 @@
         "valtio": "^2.1.2"
     },
     "devDependencies": {
-        "@appkit/cli": "^2.13.3",
+        "@appkit/cli": "^2.14.1",
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.7",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
