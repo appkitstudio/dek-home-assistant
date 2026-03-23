@@ -64,6 +64,7 @@ class Plugin implements DekPlugin {
       {
         key: "toggle-card",
         description: "Card to toggle an entity on and off",
+        isCommand: true,
         element: (props: any) => <ToggleCard {...props} />,
         schema: {
           entityId: {
@@ -98,6 +99,7 @@ class Plugin implements DekPlugin {
       {
         key: "sensor-card",
         description: "Card to display sensor data",
+        isCommand: true,
         element: (props: any) => <SensorCard {...props} />,
         schema: {
           entityId: {
@@ -134,6 +136,7 @@ class Plugin implements DekPlugin {
       {
         key: "media-card",
         description: "Card to play and pause media",
+        isCommand: true,
         element: (props: any) => <MediaCard {...props} />,
         schema: {
           entityId: {

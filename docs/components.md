@@ -2,7 +2,7 @@
 
 ## toggle-card
 
-A card for toggling a Home Assistant switch or light on and off.
+A card for toggling a Home Assistant switch or light on and off. `isCommand: true` — appears in the Add Command dialog only; not available as a board zone component.
 
 ### Schema
 
@@ -27,7 +27,7 @@ Also available as a header widget (`dek-homeassistant-weather`).
 
 ## sensor-card
 
-Displays the current value of a Home Assistant sensor entity.
+Displays the current value of a Home Assistant sensor entity. `isCommand: true` — appears in the Add Command dialog only; not available as a board zone component.
 
 ### Schema
 
@@ -43,7 +43,7 @@ Displays the current value of a Home Assistant sensor entity.
 
 ## media-card
 
-A compact card for controlling a media player entity (play/pause).
+A compact card for controlling a media player entity (play/pause). `isCommand: true` — appears in the Add Command dialog only; not available as a board zone component.
 
 ### Schema
 
