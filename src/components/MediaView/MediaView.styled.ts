@@ -46,6 +46,10 @@ export const Title = styled.div<ContentProps>`
   font-weight: ${(props) => props.theme.text.weight.heading};
   margin-bottom: 20px;
   width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export const Artist = styled.div<ContentProps>`
@@ -55,6 +59,10 @@ export const Artist = styled.div<ContentProps>`
     adjust(props.$large, props.theme.text.height.normal)}px;
   font-weight: ${(props) => props.theme.text.weight.bold};
   margin-bottom: 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export const Album = styled.div<ContentProps>`
@@ -64,6 +72,10 @@ export const Album = styled.div<ContentProps>`
     adjust(props.$large, props.theme.text.height.normal)}px;
   font-weight: ${(props) => props.theme.text.weight.bold};
   color: ${(props) => props.theme.text.color.subtle};
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export const Controls = styled.div`

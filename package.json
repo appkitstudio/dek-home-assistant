@@ -1,7 +1,7 @@
 {
     "name": "@appkit/dek-home-assistant",
     "private": false,
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Plugin providing cards and widgets for Home Assistant",
     "author": {
         "name": "Appkit"
@@ -14,8 +14,8 @@
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
     "dependencies": {
-        "@appkit/dek-plugin": "^0.46.0",
-        "@appkit/dek-ui": "^0.46.0",
+        "@appkit/dek-plugin": "*",
+        "@appkit/dek-ui": "*",
         "home-assistant-js-websocket": "^9.4.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
